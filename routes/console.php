@@ -11,21 +11,25 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-Artisan::command('hello', function () {
-    // $this->comment('From Artisan');
-    Log::info('Info From Laravel Log');
-    Log::error('This is shows Log Error. Time '.now());
-})->purpose('Welcome Users');
+// Class 31 Hasin Hyder
 
-Schedule::call(function(){
-    echo('Welcome to Laravel Scheduling!');
-})->everyMinute();
+// Artisan::command('hello', function () {
+//     // $this->comment('From Artisan');
+//     Log::info('Info From Laravel Log');
+//     Log::error('This is shows Log Error. Time '.now());
+// })->purpose('Welcome Users');
 
-Schedule::command('hello')->everyMinute();
+// Schedule::call(function(){
+//     echo('Welcome to Laravel Scheduling!');
+// })->everyMinute();
 
-Schedule::job(new BirthdayReminderJob)->everyMinute()->name('Only for Guest');
-Schedule::job(new BirthdayReminderJob('Aslam'))->everyMinute()->name('Only for Aslam');
+// Schedule::command('hello')->everyMinute();
+
+// Schedule::job(new BirthdayReminderJob)->everyMinute()->name('Only for Guest');
+// Schedule::job(new BirthdayReminderJob('Aslam'))->everyMinute()->name('Only for Aslam');
 
 // Schedule::job(new SaleReportMailerJob)->everyMinute()->runInBackground();
-Schedule::job(new SaleReportMailerJob)->everyMinute()->withoutOverlapping();
-Schedule::call(function(){})->onOneServer();
+// Schedule::job(new SaleReportMailerJob)->everyMinute()->withoutOverlapping();
+// Schedule::call(function(){})->onOneServer();
+
+// End Class 31 Hasin Hyder
