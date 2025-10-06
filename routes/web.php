@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskController;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Route;
 
@@ -38,3 +39,7 @@ Route::get('/invoices-create/{id}', function (string $id) {
     $pdf = Pdf::loadView('invoice', $data);
     // return $pdf->stream('ivoice-{$id}.pdf');
 });
+
+
+// Class 37 Hasin Hyder
+Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.home');
