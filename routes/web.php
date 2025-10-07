@@ -43,3 +43,8 @@ Route::get('/invoices-create/{id}', function (string $id) {
 
 // Class 37 Hasin Hyder
 Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.home');
+
+// Class 38 Akram Khan
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
