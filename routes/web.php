@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use App\Http\Controllers\TaskController;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Route;
@@ -48,3 +49,8 @@ Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.home');
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+// Class 38
+Route::get('/HomePage', [SiteController::class, 'HomePage'])->name('HomePage');
+Route::get('/ProfilePage', [SiteController::class, 'ProfilePage'])->name('ProfilePage');
+Route::get('/LoginPage', [SiteController::class, 'LoginPage'])->name('LoginPage');
